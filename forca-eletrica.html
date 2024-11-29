@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Força Elétrica</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Força Elétrica</h1>
+        <p>Entenda o conceito e as aplicações da força elétrica.</p>
+    </header>
+    <nav>
+        <a href="site.php">Página Inicial</a>
+        <a href="campo-eletrico.html">Campo Elétrico</a>
+        <a href="potencial-eletrico.html">Potencial Elétrico</a>
+    </nav>
+    <section>
+        <h2>O que é Força Elétrica?</h2>
+        <p>A força elétrica é a interação entre partículas carregadas, governada pela Lei de Coulomb. Ela descreve como as cargas se atraem ou se repelem dependendo de seus sinais.</p>
+        <p>A fórmula que descreve a força elétrica é:</p>
+        <p><strong>Fórmula:</strong> \( F = k \cdot \frac{|q_1 \cdot q_2|}{r^2} \)</p>
+        <p>Onde:</p>
+        <ul>
+            <li><strong>F:</strong> Força elétrica (em Newtons)</li>
+            <li><strong>k:</strong> Constante eletrostática (\( 9 \times 10^9 \, \text{N} \cdot \text{m}^2 / \text{C}^2 \))</li>
+            <li><strong>q₁ e q₂:</strong> Cargas das partículas (em Coulombs)</li>
+            <li><strong>r:</strong> Distância entre as partículas (em metros)</li>
+        </ul>
+        <p>Essa fórmula mostra que a força é diretamente proporcional ao produto das cargas e inversamente proporcional ao quadrado da distância entre elas.</p>
+        
+        <h3>Calculadora de Força Elétrica</h3>
+        <div class="formulario">
+            <form id="form-forca">
+                <label for="q1">Carga 1 (q₁) em Coulombs:</label>
+                <input type="number" id="q1" name="q1" step="any" required>
+                <br>
+                <label for="q2">Carga 2 (q₂) em Coulombs:</label>
+                <input type="number" id="q2" name="q2" step="any" required>
+                <br>
+                <label for="distancia">Distância (r) em metros:</label>
+                <input type="number" id="distancia" name="distancia" step="any" required>
+                <br><br>
+                <button type="submit">Calcular Força</button>
+            </form>
+
+            <h4>Resultado:</h4>
+            <p id="resultado"></p>
+        </div>
+
+        <img src="https://pt-static.z-dn.net/files/d16/de010493d662d6d2137ee8af6395f60e.jpg" alt="Imagem de Força Elétrica">
+    </section>
+
+    <footer>
+        <p>Desenvolvido por João Elias e Lauane Matos | Todos os direitos reservados</p>
+    </footer>
+
+    <script>
+        // Função para calcular a força elétrica
+        document.getElementById('form-forca').addEventListener('submit', function(event) {
+            event.preventDefault(); // Evita o envio do formulário e recarregamento da página
+
+            // Obtendo os valores dos inputs
+            const q1 = parseFloat(document.getElementById('q1').value);
+            const q2 = parseFloat(document.getElementById('q2').value);
+            const r = parseFloat(document.getElementById('distancia').value);
+
+            // Constante eletrostática
+            const k = 9 * Math.pow(10, 9); // N·m²/C²
+
+            // Calculando a força elétrica
+            const forca = k * Math.abs(q1 * q2) / Math.pow(r, 2);
+
+            // Exibindo o resultado
+            document.getElementById('resultado').innerText = `A força elétrica é: ${forca.toFixed(2)} N`;
+        });
+    </script>
+</body>
+</html>

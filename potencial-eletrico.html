@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Potencial Elétrico</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Potencial Elétrico</h1>
+        <p>Entenda o conceito e as aplicações do potencial elétrico.</p>
+    </header>
+    <nav>
+        <a href="site.php">Página Inicial</a>
+        <a href="forca-eletrica.html">Força Elétrica</a>
+        <a href="campo-eletrico.html">Campo Elétrico</a>
+    </nav>
+    <section>
+        <h2>O que é Potencial Elétrico?</h2>
+        <p>O potencial elétrico é uma medida de energia potencial elétrica por unidade de carga em um campo elétrico.</p>
+        <p>Ele é definido pela fórmula:</p>
+        <p><strong>Fórmula:</strong> \( V = k \cdot \frac{q}{r} \)</p>
+        <p>Onde:</p>
+        <ul>
+            <li><strong>V:</strong> Potencial elétrico (em volts)</li>
+            <li><strong>k:</strong> Constante eletrostática (\( 9 \times 10^9 \, \text{N} \cdot \text{m}^2 / \text{C}^2 \))</li>
+            <li><strong>q:</strong> Carga elétrica (em coulombs)</li>
+            <li><strong>r:</strong> Distância entre a carga e o ponto de interesse (em metros)</li>
+        </ul>
+        <p>O potencial elétrico é importante para entender como as cargas interagem em campos elétricos e como a energia é armazenada ou transferida entre elas.</p>
+        <img src="https://www.coladaweb.com/wp-content/uploads/potencial-eletrico.jpg" alt="Imagem de Potencial Elétrico">
+
+        <!-- Formulário para calcular o Potencial Elétrico -->
+        <div class="formulario">
+            <h3>Calcular Potencial Elétrico</h3>
+            <form id="formPotencial">
+                <label for="carga">Carga (q) em Coulombs:</label>
+                <input type="number" id="carga" placeholder="Ex: 1.6e-19" required>
+
+                <label for="distancia">Distância (r) em metros:</label>
+                <input type="number" id="distancia" placeholder="Ex: 0.05" required>
+
+                <button type="submit">Calcular Potencial Elétrico</button>
+            </form>
+
+            <div id="resultado"></div>
+        </div>
+    </section>
+    <footer>
+        <p>Desenvolvido por João Elias e Lauane Matos | Todos os direitos reservados</p>
+    </footer>
+
+    <script>
+        // Função para calcular o Potencial Elétrico
+        document.getElementById('formPotencial').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const k = 9 * Math.pow(10, 9); // Constante eletrostática em N·m²/C²
+            const carga = parseFloat(document.getElementById('carga').value);
+            const distancia = parseFloat(document.getElementById('distancia').value);
+
+            if (isNaN(carga) || isNaN(distancia)) {
+                alert("Por favor, insira valores válidos.");
+                return;
+            }
+
+            // Calculando o potencial elétrico
+            const potencial = k * carga / distancia;
+
+            // Exibindo o resultado
+            document.getElementById('resultado').innerHTML = `
+                <p><strong>Potencial Elétrico Calculado:</strong> ${potencial.toFixed(2)} V</p>
+            `;
+        });
+    </script>
+</body>
+</html>

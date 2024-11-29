@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Física Elétrica</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Física Elétrica</h1>
+        <p>Aprenda sobre os principais conceitos da eletricidade: Força Elétrica, Campo Elétrico e Potencial Elétrico.</p>
+    </header>
+
+    <nav>
+        <a href="site.php">Página Inicial</a>
+        <a href="forca-eletrica.html">Força Elétrica</a>
+        <a href="campo-eletrico.html">Campo Elétrico</a>
+        <a href="potencial-eletrico.html">Potencial Elétrico</a>
+    </nav>
+
+    <section>
+        <h2>Bem-vindo ao Mundo da Eletricidade!</h2>
+        <p>Este site foi criado para ajudar você a entender alguns dos principais conceitos da física elétrica. Aqui, você encontrará explicações detalhadas sobre:</p>
+        <ul>
+            <li><strong>Força Elétrica:</strong> Como as cargas elétricas interagem através da Lei de Coulomb.</li>
+            <li><strong>Campo Elétrico:</strong> O conceito de campo gerado por uma carga elétrica e como ele afeta outras cargas.</li>
+            <li><strong>Potencial Elétrico:</strong> O trabalho necessário para mover uma carga em um campo elétrico e como ele é calculado.</li>
+        </ul>
+        <p>Esses são conceitos fundamentais para entender as interações elétricas que ocorrem em nosso dia a dia e na natureza.</p>
+
+        <h3>Explorando as Três Áreas:</h3>
+        <p>Cada um desses tópicos é crucial para a compreensão das leis que regem as forças elétricas, e eles têm aplicações em diversas áreas da tecnologia, como:</p>
+        <ul>
+            <li>Eletrônica e Circuitos Elétricos</li>
+            <li>Desenvolvimento de dispositivos de armazenamento de energia</li>
+            <li>Tecnologias de comunicação sem fio</li>
+            <li>Indústria de geração de energia elétrica</li>
+        </ul>
+
+        <p>Se você está começando a aprender sobre física elétrica, esse site será um excelente ponto de partida!</p>
+
+        <h3>Objetivos do Site:</h3>
+        <p>O objetivo principal deste site é fornecer uma explicação clara e acessível sobre a Força Elétrica, Campo Elétrico e Potencial Elétrico, além de ajudar no cálculo prático dessas grandezas por meio das calculadoras disponíveis.</p>
+    </section>
+
+    <section id="desenvolvedores">
+        <h2>Sobre os Desenvolvedores</h2>
+        <p>Este site foi desenvolvido por duas pessoas. Aqui estão algumas informações sobre os desenvolvedores:</p>
+
+        <div class="desenvolvedor">
+            <img src="je.png" 
+            alt="João"
+            class="img">
+            <h3>Desenvolvedor: João Elias</h3>
+            <p>João Elias é aluno do IFBA Campus Seabra, cursa TI e adora esportes.</p>
+        </div>
+
+        <div class="desenvolvedor">
+           <img src="l.png" 
+            alt="Lauane" 
+            class="img"> 
+            <h3>Desenvolvedora: Lauane Matos</h3>
+            <p>Lauane Matos é aluna do IFBA Campus Seabra, cursa TI e é amante da música.</p>
+        </div>
+
+    </section>
+
+    <footer>
+        <p>Desenvolvido por João Elias e Lauane Matos | Todos os direitos reservados</p>
+    </footer>
+</body>
+</html>
