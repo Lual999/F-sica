@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campo Elétrico</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Campo Elétrico</h1>
+        <p>Compreenda o conceito e as características do campo elétrico.</p>
+    </header>
+    <nav>
+        <a href="site.php">Página Inicial</a>
+        <a href="forca-eletrica.html">Força Elétrica</a>
+        <a href="potencial-eletrico.html">Potencial Elétrico</a>
+    </nav>
+    <section>
+        <h2>O que é Campo Elétrico?</h2>
+        <p>O campo elétrico é uma região onde uma carga elétrica experimenta uma força. Esse campo é gerado por cargas elétricas e é descrito pela Lei de Coulomb.</p>
+        <p>A fórmula que descreve a intensidade do campo elétrico gerado por uma carga é:</p>
+        <p><strong>Fórmula:</strong> \( E = k \cdot \frac{|q|}{r^2} \)</p>
+        <p>Onde:</p>
+        <ul>
+            <li><strong>E:</strong> Intensidade do campo elétrico (em N/C)</li>
+            <li><strong>k:</strong> Constante eletrostática (\( 9 \times 10^9 \, \text{N} \cdot \text{m}^2 / \text{C}^2 \))</li>
+            <li><strong>q:</strong> Carga elétrica que gera o campo (em Coulombs)</li>
+            <li><strong>r:</strong> Distância até o ponto onde se mede o campo (em metros)</li>
+        </ul>
+        <p>O campo elétrico é uma maneira de visualizar a interação de cargas elétricas em uma região do espaço. Ele é um vetor e sua direção é dada pela linha que une a carga que o gera ao ponto onde o campo é medido.</p>
+
+        <!-- Formulário de cálculo -->
+        <h3>Calculadora de Campo Elétrico</h3>
+        <div class="formulario">
+            <form id="form-campo">
+                <label for="carga">Carga (q) em Coulombs:</label>
+                <input type="number" id="carga" name="carga" step="any" required>
+                <br>
+                <label for="distancia">Distância (r) em metros:</label>
+                <input type="number" id="distancia" name="distancia" step="any" required>
+                <br><br>
+                <button type="submit">Calcular Campo Elétrico</button>
+            </form>
+
+            <h4>Resultado:</h4>
+            <p id="resultado"></p>
+        </div>
+
+        <img src="https://conceito.de/wp-content/uploads/2023/03/lightning-2295075_1280.jpg" alt="Imagem de Campo Elétrico">
+    </section>
+    <footer>
+        <p>Desenvolvido por João Elias e Lauane Matos | Todos os direitos reservados</p> 
+    </footer>
+
+    <script>
+        // Função para calcular a intensidade do campo elétrico
+        document.getElementById('form-campo').addEventListener('submit', function(event) {
+            event.preventDefault(); // Evita o envio do formulário e recarregamento da página
+
+            // Obtendo os valores dos inputs
+            const carga = parseFloat(document.getElementById('carga').value);
+            const distancia = parseFloat(document.getElementById('distancia').value);
+
+            // Constante eletrostática
+            const k = 9 * Math.pow(10, 9); // N·m²/C²
+
+            // Calculando a intensidade do campo elétrico
+            const campo = k * Math.abs(carga) / Math.pow(distancia, 2);
+
+            // Exibindo o resultado
+            document.getElementById('resultado').innerText = `A intensidade do campo elétrico é: ${campo.toFixed(2)} N/C`;
+        });
+    </script>
+</body>
+</html>
